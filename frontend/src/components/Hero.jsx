@@ -72,6 +72,34 @@ export const Hero = ({ onRequestQuote }) => {
           style={{ background: 'linear-gradient(160deg,#020a14 0%,#04111f 40%,#060d1c 70%,#02080f 100%)' }}
         />
 
+        {/* 2. Real security background video — Mixkit free stock */}
+        {!reducedMotion && (
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            crossOrigin="anonymous"
+            poster="https://assets.mixkit.co/videos/48922/48922-thumb-720-3.jpg"
+            className="absolute inset-0 w-full h-full object-cover object-center opacity-60"
+            style={{ mixBlendMode: 'luminosity' }}
+          >
+            {/* Primary: security camera rotating — classy, cinematic */}
+            <source src="https://assets.mixkit.co/videos/48922/48922-720.mp4" type="video/mp4" />
+            {/* Fallback: special agent on phone */}
+            <source src="https://assets.mixkit.co/videos/14090/14090-720.mp4" type="video/mp4" />
+          </video>
+        )}
+
+        {/* Fallback static poster for reduced-motion */}
+        {reducedMotion && (
+          <img
+            src="https://assets.mixkit.co/videos/48922/48922-thumb-720-3.jpg"
+            alt="Security surveillance"
+            className="absolute inset-0 w-full h-full object-cover object-center opacity-40"
+          />
+        )}
+
         {/* 2. Gold / amber orb — top-left */}
         {!reducedMotion && (
           <div className="absolute pointer-events-none" style={{
