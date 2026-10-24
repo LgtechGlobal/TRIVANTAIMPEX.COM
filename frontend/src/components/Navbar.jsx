@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Logo } from './Logo';
 import { COMPANY_CONFIG } from '../config/company';
-import { Menu, X, ArrowRight, Phone, Shield } from 'lucide-react';
+import { Menu, X, ArrowRight, Shield } from 'lucide-react';
 
 export const Navbar = ({ onRequestQuote }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -96,16 +96,6 @@ export const Navbar = ({ onRequestQuote }) => {
 
             {/* Right: Quick Hotline & Primary Quote CTA */}
             <div className="hidden lg:flex items-center gap-2.5 xl:gap-3 flex-shrink-0">
-              <a
-                href={`tel:${COMPANY_CONFIG.contact.primaryPhone.replace(/\s+/g, '')}`}
-                className="flex items-center gap-1.5 text-xs font-semibold text-brand-textMuted hover:text-brand-cyan transition-colors py-2 px-2.5 xl:px-3 rounded-lg border border-brand-border/40 hover:border-brand-border whitespace-nowrap"
-                title="Call Trivanta Impex 24/7 Operations Desk"
-              >
-                <Phone className="w-3.5 h-3.5 text-brand-cyan" />
-                <span className="hidden xl:inline">{COMPANY_CONFIG.contact.primaryPhone}</span>
-                <span className="xl:hidden">24/7 Desk</span>
-              </a>
-
               <button
                 type="button"
                 onClick={onRequestQuote}
@@ -190,16 +180,7 @@ export const Navbar = ({ onRequestQuote }) => {
             </nav>
           </div>
 
-          <div className="pt-6 border-t border-brand-border/40 space-y-3">
-            <a
-              href={`tel:${COMPANY_CONFIG.contact.primaryPhone.replace(/\s+/g, '')}`}
-              className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-lg bg-brand-card border border-brand-border/40 text-xs font-semibold text-brand-cyan hover:border-brand-cyan transition-colors"
-            >
-              <Phone className="w-4 h-4" />
-              <span>{COMPANY_CONFIG.contact.primaryPhone}</span>
-            </a>
-
-            <button
+          <div className="pt-6 border-t border-brand-border/40 space-y-3">            <button
               type="button"
               onClick={() => {
                 closeMenu();
