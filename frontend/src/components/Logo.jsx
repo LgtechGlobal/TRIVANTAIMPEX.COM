@@ -1,12 +1,12 @@
 import React from 'react';
 
 /**
- * Logo component — uses the official Trivanta Impex TI logo image.
+ * Logo component — uses the official Trivanta Impex TI logo SVG.
  *
  * Props:
  *  size     — 'sm' | 'md' | 'lg' | 'xl'  (controls image height)
- *  variant  — 'full' | 'compact'          (full = image + wordmark text, compact = image only)
- *  className — extra class names
+ *  variant  — 'full' | 'compact'          (full = logo + wordmark, compact = logo only)
+ *  className — extra class names on the anchor
  *  showText  — override to hide wordmark regardless of variant
  */
 export const Logo = ({
@@ -15,15 +15,9 @@ export const Logo = ({
   size = 'md',
   variant = 'full'
 }) => {
-  // Image height in px for each size
-  const heights = {
-    sm: 36,
-    md: 48,
-    lg: 64,
-    xl: 88,
-  };
-
-  const h = heights[size] || 48;
+  // Logo mark height in px per size
+  const heights = { sm: 38, md: 52, lg: 68, xl: 92 };
+  const h = heights[size] || 52;
 
   // Show text wordmark only when showText=true AND not compact variant
   const showWordmark = showText && variant !== 'compact';
@@ -31,44 +25,46 @@ export const Logo = ({
   return (
     <a
       href="#hero"
-      className={`inline-flex items-center gap-2.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan rounded-lg transition-transform duration-300 flex-shrink-0 ${className}`}
+      className={`inline-flex items-center gap-2 group focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan rounded-lg transition-transform duration-300 flex-shrink-0 ${className}`}
       aria-label="Trivanta Impex Home"
     >
-      {/* Official TI Logo mark */}
+      {/* Official TI Logo mark — SVG scales perfectly at all resolutions */}
       <div
         className="flex-shrink-0 transition-transform duration-300 group-hover:scale-105"
         style={{ height: h, width: 'auto' }}
       >
         <img
-          src="/images/trivanta-logo.png"
-          alt="Trivanta Impex Logo"
+          src="/images/trivanta-logo.svg"
+          alt="Trivanta Impex TI Logo"
           height={h}
           style={{
             height: h,
             width: 'auto',
             objectFit: 'contain',
             display: 'block',
-            // Drop shadow to make it pop on dark backgrounds
-            filter: 'drop-shadow(0 0 8px rgba(7,136,255,0.35))',
+            // White background so the navy letters are visible on dark site backgrounds
+            backgroundColor: 'white',
+            borderRadius: '6px',
+            padding: '2px 4px',
           }}
           loading="eager"
           draggable={false}
         />
       </div>
 
-      {/* Wordmark text — shown alongside the logo mark */}
+      {/* Wordmark — scales proportionally with logo height */}
       {showWordmark && (
         <div className="flex flex-col justify-center leading-none">
           <div className="flex items-baseline gap-1">
             <span
               className="font-extrabold tracking-wider text-white uppercase"
-              style={{ fontSize: h * 0.37 }}
+              style={{ fontSize: h * 0.36 }}
             >
               TRIVANTA
             </span>
             <span
               className="font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-brand-electric to-brand-cyan uppercase"
-              style={{ fontSize: h * 0.37 }}
+              style={{ fontSize: h * 0.36 }}
             >
               IMPEX
             </span>
