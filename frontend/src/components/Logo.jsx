@@ -34,7 +34,7 @@ export const Logo = ({
         style={{ height: h, width: 'auto' }}
       >
         <img
-          src="/images/trivanta-logo.svg"
+          src="/images/logo.png"
           alt="Trivanta Impex TI Logo"
           height={h}
           style={{
