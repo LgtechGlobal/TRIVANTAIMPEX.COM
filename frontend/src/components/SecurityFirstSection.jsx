@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { ArrowRight, Users, Shield, Cpu } from 'lucide-react';
 
 export const SecurityFirstSection = ({ onRequestQuote }) => {
@@ -27,6 +27,21 @@ export const SecurityFirstSection = ({ onRequestQuote }) => {
           
           {/* Left Column: Visual Checkpoint Showcase */}
           <div className="lg:col-span-6 relative">
+            {/* Floating Night Patrol Card — top-right overlay */}
+            <div className="absolute -top-4 -right-4 z-30 hidden sm:block w-40">
+              <div className="rounded-xl overflow-hidden border-2 border-brand-electric/60 shadow-[0_6px_24px_rgba(7,136,255,0.3)]">
+                <img
+                  src="/images/WhatsApp Image 2026-10-24 at 6.55.41 PM (1).jpeg"
+                  alt="Trivanta Impex security guards on night perimeter patrol"
+                  className="w-full h-24 object-cover"
+                  loading="lazy"
+                />
+                <div className="bg-brand-bgSecondary/95 backdrop-blur-md px-2.5 py-1.5">
+                  <p className="text-[9px] font-bold text-brand-electric uppercase tracking-wider">Night Patrol</p>
+                  <p className="text-[9px] text-brand-textMuted">24/7 perimeter coverage</p>
+                </div>
+              </div>
+            </div>
             <div className="relative rounded-2xl overflow-hidden border border-brand-border/80 shadow-[0_20px_50px_rgba(0,0,0,0.7)] group">
               <img
                 src="/images/security-checkpoint-screening.jpg"
@@ -119,3 +134,4 @@ export const SecurityFirstSection = ({ onRequestQuote }) => {
     </section>
   );
 };
+

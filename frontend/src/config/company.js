@@ -1,4 +1,4 @@
-export const COMPANY_CONFIG = {
+﻿export const COMPANY_CONFIG = {
   name: "Trivanta Impex Facility and Management Pvt. Ltd.",
   shortName: "Trivanta Impex",
   legalName: "Trivanta Impex Facility and Management Private Limited",
@@ -91,7 +91,7 @@ export const COMPANY_CONFIG = {
       title: "FACILITY MANAGEMENT",
       shortDesc: "Organized facility support to help businesses maintain efficient, professional, and well-managed environments.",
       fullDesc: "Comprehensive facility upkeep and management solutions that streamline site operations, maintain infrastructure cleanliness, manage utility coordination, and establish well-regulated operational hygiene for enterprises.",
-      image: "/images/fire-safety-training.jpg",
+      image: "/images/WhatsApp Image 2026-10-24 at 6.54.16 PM.jpeg",
       badge: "Operational Excellence",
       scope: ["Infrastructure Maintenance", "Housekeeping Oversight", "Utility & Vendor Coordination", "Site Safety Protocols"]
     },
@@ -101,7 +101,7 @@ export const COMPANY_CONFIG = {
       title: "EVENT SECURITY",
       shortDesc: "Security personnel and access-control support for corporate gatherings, private events, and organized functions.",
       fullDesc: "Specialized event security deployments focused on crowd direction, VIP escorting, perimeter ingress/egress cordons, and emergency protocol coordination to ensure uninterrupted and secure proceedings.",
-      image: "/images/trivanta-security-team-lineup.jpg",
+      image: "/images/WhatsApp Image 2026-10-24 at 6.54.37 PM.jpeg",
       badge: "Dynamic Deployments",
       scope: ["Crowd & Access Management", "VIP Escort & Area Isolation", "Emergency Exit Readiness", "Parking & Entry Regulation"]
     },
@@ -111,7 +111,7 @@ export const COMPANY_CONFIG = {
       title: "MANPOWER SOLUTIONS",
       shortDesc: "Professional staffing support tailored to business and facility requirements.",
       fullDesc: "Customized professional staffing solutions delivering trained, accountable, and legally compliant manpower for specialized administrative, supervisory, maintenance, and operational positions.",
-      image: "/images/fire-safety-training.jpg",
+      image: "/images/WhatsApp Image 2026-10-24 at 6.54.17 PM (1).jpeg",
       badge: "Staffing Solutions",
       scope: ["Trained Security Supervisors", "Facility Support Staff", "Industrial Auxiliary Crews", "Statutory Compliance Management"]
     }
@@ -162,7 +162,7 @@ export const COMPANY_CONFIG = {
     {
       id: "corporate-offices",
       name: "Corporate Offices",
-      image: "/images/security-checkpoint-screening.jpg",
+      image: "/images/WhatsApp Image 2026-10-24 at 6.55.40 PM.jpeg",
       description: "Executive reception, visitor management, and discreet floor protection.",
       features: ["Lobby Concierge", "Badge Audits", "Asset Tracking"]
     },
@@ -176,7 +176,7 @@ export const COMPANY_CONFIG = {
     {
       id: "residential-communities",
       name: "Residential Communities",
-      image: "/images/trivanta-security-team-lineup.jpg",
+      image: "/images/WhatsApp Image 2026-10-24 at 6.55.41 PM (1).jpeg",
       description: "Gated residential enclaves, township developments, and condominiums.",
       features: ["Visitor Logging", "Patrol Beats", "Emergency Support"]
     },
@@ -204,14 +204,14 @@ export const COMPANY_CONFIG = {
     {
       id: "educational-institutions",
       name: "Educational Institutions",
-      image: "/images/fire-safety-training.jpg",
+      image: "/images/WhatsApp Image 2026-10-24 at 6.54.18 PM.jpeg",
       description: "Schools, university campuses, and academic institutions.",
       features: ["Student Protection", "Campus Entry Gates", "Traffic Marshaling"]
     },
     {
       id: "events-venues",
       name: "Events and Venues",
-      image: "/images/trivanta-security-team-lineup.jpg",
+      image: "/images/WhatsApp Image 2026-10-24 at 6.54.17 PM (1).jpeg",
       description: "Conventions, corporate seminars, expos, and organized private gatherings.",
       features: ["Ingress/Egress Control", "Crowd Stewards", "VIP Cordons"]
     }
@@ -259,3 +259,5 @@ export const COMPANY_CONFIG = {
     { label: "Contact", href: "#contact" }
   ]
 };
+
+

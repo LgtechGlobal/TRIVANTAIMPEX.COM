@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { TrustHighlights } from './components/TrustHighlights';
@@ -8,6 +8,7 @@ import { WhyChooseUs } from './components/WhyChooseUs';
 import { IndustriesSection } from './components/IndustriesSection';
 import { SecurityFirstSection } from './components/SecurityFirstSection';
 import { WorkingProcess } from './components/WorkingProcess';
+import { PhotoGallery } from './components/PhotoGallery';
 import { CareersSection } from './components/CareersSection';
 import { RequestQuoteSection } from './components/RequestQuoteSection';
 import { Footer } from './components/Footer';
@@ -81,6 +82,9 @@ export function App() {
 
         {/* Our 4-Step Working Process */}
         <WorkingProcess />
+
+        {/* Photo Gallery — Real Field Operations */}
+        <PhotoGallery />
 
         {/* Careers & Recruitment Form */}
         <CareersSection />
@@ -183,3 +187,4 @@ export function App() {
 }
 
 export default App;
+

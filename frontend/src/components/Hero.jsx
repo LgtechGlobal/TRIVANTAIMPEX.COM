@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { Shield, ArrowRight, CheckCircle2, ChevronDown } from 'lucide-react';
 import { COMPANY_CONFIG } from '../config/company';
 
@@ -80,7 +80,7 @@ export const Hero = ({ onRequestQuote }) => {
             muted
             playsInline
             crossOrigin="anonymous"
-            poster="https://assets.mixkit.co/videos/48922/48922-thumb-720-3.jpg"
+            poster="/images/WhatsApp Image 2026-10-24 at 6.55.41 PM (1).jpeg"
             className="absolute inset-0 w-full h-full object-cover object-center opacity-60"
             style={{ mixBlendMode: 'luminosity' }}
           >
@@ -94,7 +94,7 @@ export const Hero = ({ onRequestQuote }) => {
         {/* Fallback static poster for reduced-motion */}
         {reducedMotion && (
           <img
-            src="https://assets.mixkit.co/videos/48922/48922-thumb-720-3.jpg"
+            src="/images/WhatsApp Image 2026-10-24 at 6.55.41 PM (1).jpeg"
             alt="Security surveillance"
             className="absolute inset-0 w-full h-full object-cover object-center opacity-40"
           />
@@ -284,3 +284,4 @@ export const Hero = ({ onRequestQuote }) => {
     </section>
   );
 };
+

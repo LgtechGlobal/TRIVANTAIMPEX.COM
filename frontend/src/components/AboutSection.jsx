@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { COMPANY_CONFIG } from '../config/company';
 import { Shield, CheckCircle, ArrowRight, Award, Compass, Eye } from 'lucide-react';
 
@@ -54,8 +54,24 @@ export const AboutSection = ({ onRequestQuote }) => {
                 </div>
               </div>
 
+              {/* Patrol Vehicle Inset Card — bottom-right overlapping */}
+              <div className="absolute -bottom-5 -right-4 sm:right-4 z-20 hidden sm:block w-44 sm:w-52">
+                <div className="rounded-xl overflow-hidden border-2 border-brand-cyan/50 shadow-[0_8px_30px_rgba(0,212,255,0.25)]">
+                  <img
+                    src="/images/WhatsApp Image 2026-10-24 at 6.54.37 PM.jpeg"
+                    alt="Trivanta Impex patrol vehicle — Mahindra Bolero marked SUV"
+                    className="w-full h-28 sm:h-32 object-cover"
+                    loading="lazy"
+                  />
+                  <div className="bg-brand-bgSecondary/95 backdrop-blur-md px-3 py-2">
+                    <p className="text-[10px] font-bold text-brand-cyan uppercase tracking-wider">Patrol Vehicle</p>
+                    <p className="text-[10px] text-brand-textMuted mt-0.5">Mobile rapid-response unit</p>
+                  </div>
+                </div>
+              </div>
+
               {/* Floating Bottom Card */}
-              <div className="absolute -bottom-6 -right-4 sm:right-6 max-w-xs z-20 hidden sm:block">
+              <div className="absolute -bottom-6 left-4 max-w-xs z-20 hidden sm:block">
                 <div className="glass-card rounded-xl p-4 border border-brand-border shadow-2xl backdrop-blur-xl">
                   <div className="flex items-center gap-3">
                     <div className="p-2.5 rounded-lg bg-brand-electric/20 border border-brand-electric/40 text-brand-cyan">
@@ -137,3 +153,4 @@ export const AboutSection = ({ onRequestQuote }) => {
     </section>
   );
 };
+

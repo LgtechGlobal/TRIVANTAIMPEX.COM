@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { COMPANY_CONFIG } from '../config/company';
 import { Search, Compass, FileSpreadsheet, CheckCircle2 } from 'lucide-react';
 
@@ -8,6 +8,13 @@ export const WorkingProcess = () => {
     <Compass className="w-5 h-5 text-brand-cyan" />,
     <FileSpreadsheet className="w-5 h-5 text-brand-cyan" />,
     <CheckCircle2 className="w-5 h-5 text-brand-cyan" />
+  ];
+
+  const stepPhotos = [
+    { src: "/images/WhatsApp Image 2026-10-24 at 6.55.40 PM.jpeg", alt: "Guard checking gate pass at factory entrance" },
+    { src: "/images/security-checkpoint-screening.jpg",             alt: "Security checkpoint with metal detector and screening" },
+    { src: "/images/trivanta-security-team-lineup.jpg",             alt: "Trivanta Impex security team deployment" },
+    { src: "/images/WhatsApp Image 2026-10-24 at 6.55.41 PM (1).jpeg", alt: "Guards on night perimeter patrol monitoring" }
   ];
 
   return (
@@ -47,13 +54,22 @@ export const WorkingProcess = () => {
                 key={step.number}
                 className="flex flex-row lg:flex-col items-start gap-6 lg:gap-0 group"
               >
-                <div className="relative flex-shrink-0 flex items-center justify-center">
+                <div className="relative flex-shrink-0 flex flex-col items-center gap-3">
                   <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-2xl bg-brand-bgSecondary border-2 border-brand-border group-hover:border-brand-cyan group-hover:shadow-[0_0_20px_rgba(0,212,255,0.4)] transition-all duration-300 flex items-center justify-center relative">
                     {stepIcons[idx]}
 
                     <span className="absolute -top-2 -right-2 bg-gradient-to-r from-brand-electric to-brand-cyan text-white text-[11px] font-black px-2 py-0.5 rounded-full shadow-sm font-mono">
                       {step.number}
                     </span>
+                  </div>
+                  {/* Step photo thumbnail */}
+                  <div className="hidden lg:block w-14 h-14 rounded-full overflow-hidden border-2 border-brand-border/60 group-hover:border-brand-cyan/60 transition-all duration-300 shadow-md">
+                    <img
+                      src={stepPhotos[idx].src}
+                      alt={stepPhotos[idx].alt}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
                   </div>
                 </div>
 
@@ -85,3 +101,4 @@ export const WorkingProcess = () => {
     </section>
   );
 };
+
