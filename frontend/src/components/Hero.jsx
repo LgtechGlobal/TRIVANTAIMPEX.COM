@@ -1,4 +1,5 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Shield, ArrowRight, CheckCircle2, ChevronDown } from 'lucide-react';
 import { COMPANY_CONFIG } from '../config/company';
 
@@ -209,22 +210,24 @@ export const Hero = ({ onRequestQuote }) => {
           </span>
         </h1>
 
-        {/* Description */}
-        <p className={`text-sm sm:text-base lg:text-lg text-white/55 leading-relaxed max-w-xs sm:max-w-md lg:max-w-xl mx-auto mb-8 sm:mb-10 ${!reducedMotion ? 'hero-fade-3' : ''}`}>
-          Professional security and facility management solutions designed to protect
-          people, properties, and businesses with discipline, reliability, and excellence.
+        {/* Description & Trinity Callout */}
+        <p className={`text-sm sm:text-base lg:text-lg text-white/70 leading-relaxed max-w-xs sm:max-w-md lg:max-w-2xl mx-auto mb-3 ${!reducedMotion ? 'hero-fade-3' : ''}`}>
+          Integrated Security, Facility &amp; Workforce Solutions built on 15+ years of management expertise, operational discipline, and customer trust.
+        </p>
+        <p className={`text-xs sm:text-sm font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-r from-brand-electric via-brand-cyan to-white mb-8 sm:mb-10 ${!reducedMotion ? 'hero-fade-3' : ''}`}>
+          {COMPANY_CONFIG.trinity}
         </p>
 
         {/* CTAs */}
         <div className={`flex flex-col xs:flex-row sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto ${!reducedMotion ? 'hero-fade-4' : ''}`}>
-          <a
-            href="#services"
+          <Link
+            to="/services"
             className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl text-sm sm:text-base font-bold text-white border border-white/15 group transition-all duration-300"
             style={{ background:'linear-gradient(135deg,#0788FF,#0092FF)', boxShadow:'0 0 28px rgba(7,136,255,0.4)' }}
           >
             <span>Explore Our Services</span>
             <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:translate-x-1" />
-          </a>
+          </Link>
 
           <button
             type="button"
@@ -240,9 +243,9 @@ export const Hero = ({ onRequestQuote }) => {
         <div className={`mt-10 sm:mt-14 pt-6 sm:pt-8 border-t border-white/10 w-full max-w-2xl mx-auto ${!reducedMotion ? 'hero-fade-5' : ''}`}>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6">
             {[
-              'Disciplined Armed & Unarmed Guards',
-              'Rigorous Site Access Protocols',
-              'Trained Emergency Response',
+              'Armed & Unarmed Guarding',
+              'Facility & Housekeeping Care',
+              'Payroll & Workforce Solutions',
             ].map((label) => (
               <div key={label} className="flex items-center justify-center sm:justify-start gap-2">
                 <CheckCircle2 className="w-4 h-4 text-brand-cyan flex-shrink-0" />

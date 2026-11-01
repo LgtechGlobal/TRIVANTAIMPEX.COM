@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Logo } from './Logo';
 import { COMPANY_CONFIG } from '../config/company';
 import { ArrowUp, Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, X } from 'lucide-react';
@@ -87,27 +88,29 @@ export const Footer = () => {
               <ul className="space-y-3 text-sm">
                 {COMPANY_CONFIG.navLinks.map((link) => (
                   <li key={link.label}>
-                    <a href={link.href} className="hover:text-brand-cyan transition-colors">
+                    <Link to={link.href} className="hover:text-brand-cyan transition-colors">
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Col 3: Core Services */}
+            {/* Col 3: Core Divisions */}
             <div className="lg:col-span-3">
               <h4 className="text-xs font-bold text-white uppercase tracking-widest mb-5 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-brand-electric" />
-                <span>Core Services</span>
+                <span>Core Divisions</span>
               </h4>
               <ul className="space-y-3 text-sm">
-                <li><a href="#services" className="hover:text-brand-cyan transition-colors">Security Guard Services</a></li>
-                <li><a href="#services" className="hover:text-brand-cyan transition-colors">Corporate Security Support</a></li>
-                <li><a href="#services" className="hover:text-brand-cyan transition-colors">Industrial Site Protection</a></li>
-                <li><a href="#services" className="hover:text-brand-cyan transition-colors">Facility Management Solutions</a></li>
-                <li><a href="#services" className="hover:text-brand-cyan transition-colors">Event Security & Access Control</a></li>
-                <li><a href="#services" className="hover:text-brand-cyan transition-colors">Trained Manpower Staffing</a></li>
+                <li><Link to="/services" className="hover:text-brand-cyan transition-colors font-semibold text-white/90">01. Security Services</Link></li>
+                <li className="text-xs text-brand-textMuted pl-3.5 border-l border-brand-border/40">Armed & Unarmed Guarding, VIP Escorts, Lady Guards</li>
+                <li><Link to="/services" className="hover:text-brand-cyan transition-colors font-semibold text-white/90">02. Integrated Facility Management</Link></li>
+                <li className="text-xs text-brand-textMuted pl-3.5 border-l border-brand-border/40">Mechanized Housekeeping, MEP, Deep Cleaning</li>
+                <li><Link to="/services" className="hover:text-brand-cyan transition-colors font-semibold text-white/90">03. E-Surveillance & Command Center</Link></li>
+                <li className="text-xs text-brand-textMuted pl-3.5 border-l border-brand-border/40">24x7 Virtual Guarding, Alarm & Emergency Response</li>
+                <li><Link to="/services" className="hover:text-brand-cyan transition-colors font-semibold text-white/90">04. Specialized Solutions & Manpower</Link></li>
+                <li className="text-xs text-brand-textMuted pl-3.5 border-l border-brand-border/40">Fire Safety Drills, Consultancy, Skilled Workforce</li>
               </ul>
             </div>
 
@@ -129,9 +132,12 @@ export const Footer = () => {
 
                 <div className="flex items-start gap-2.5">
                   <Mail className="w-4 h-4 text-brand-cyan flex-shrink-0 mt-0.5" />
-                  <div>
-                    <a href={`mailto:${COMPANY_CONFIG.contact.email}`} className="font-semibold text-white hover:text-brand-cyan">
+                  <div className="space-y-0.5">
+                    <a href={`mailto:${COMPANY_CONFIG.contact.email}`} className="font-semibold text-white hover:text-brand-cyan block">
                       {COMPANY_CONFIG.contact.email}
+                    </a>
+                    <a href={`mailto:${COMPANY_CONFIG.contact.supportEmail}`} className="text-brand-textMuted hover:text-brand-cyan block text-[11px]">
+                      {COMPANY_CONFIG.contact.supportEmail}
                     </a>
                   </div>
                 </div>

@@ -327,11 +327,27 @@ export const RequestQuoteSection = ({ preselectedService }) => {
                         onChange={handleChange}
                         className="w-full px-4 py-3 rounded-xl bg-brand-bgSecondary border border-brand-border text-white text-sm focus:outline-none focus:border-brand-cyan transition-colors cursor-pointer"
                       >
-                        {COMPANY_CONFIG.services.map((svc) => (
-                          <option key={svc.id} value={svc.title} className="bg-brand-bgSecondary text-white">
-                            {svc.title}
-                          </option>
-                        ))}
+                        <optgroup label="── 01. SECURITY SERVICES ──" className="bg-brand-bgSecondary font-bold text-brand-cyan">
+                          {COMPANY_CONFIG.services.filter(s => s.category === 'security').map((svc) => (
+                            <option key={svc.id} value={svc.title} className="text-white font-normal">
+                              {svc.title}
+                            </option>
+                          ))}
+                        </optgroup>
+                        <optgroup label="── 02. FACILITY MANAGEMENT ──" className="bg-brand-bgSecondary font-bold text-brand-cyan">
+                          {COMPANY_CONFIG.services.filter(s => s.category === 'facility').map((svc) => (
+                            <option key={svc.id} value={svc.title} className="text-white font-normal">
+                              {svc.title}
+                            </option>
+                          ))}
+                        </optgroup>
+                        <optgroup label="── 03. PAYROLL & WORKFORCE ──" className="bg-brand-bgSecondary font-bold text-brand-cyan">
+                          {COMPANY_CONFIG.services.filter(s => s.category === 'payroll').map((svc) => (
+                            <option key={svc.id} value={svc.title} className="text-white font-normal">
+                              {svc.title}
+                            </option>
+                          ))}
+                        </optgroup>
                       </select>
                     </div>
 
@@ -350,6 +366,7 @@ export const RequestQuoteSection = ({ preselectedService }) => {
                         <option value="11-25 Security Personnel" className="bg-brand-bgSecondary text-white">11–25 Security Personnel</option>
                         <option value="25+ Large Enterprise Force" className="bg-brand-bgSecondary text-white">25+ Large Enterprise Force</option>
                         <option value="Facility Management Contract" className="bg-brand-bgSecondary text-white">Facility Management Contract</option>
+                        <option value="Payroll & Workforce Management" className="bg-brand-bgSecondary text-white">Payroll &amp; Workforce Support</option>
                         <option value="Single Event / Short-term Deployment" className="bg-brand-bgSecondary text-white">Single Event / Short-term Deployment</option>
                       </select>
                     </div>

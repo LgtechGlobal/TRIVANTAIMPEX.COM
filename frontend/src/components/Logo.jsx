@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 /**
  * Logo component — uses the official Trivanta Impex TI logo SVG.
@@ -23,8 +24,8 @@ export const Logo = ({
   const showWordmark = showText && variant !== 'compact';
 
   return (
-    <a
-      href="#hero"
+    <Link
+      to="/"
       className={`inline-flex items-center gap-2 group focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan rounded-lg transition-transform duration-300 flex-shrink-0 ${className}`}
       aria-label="Trivanta Impex Home"
     >
@@ -42,10 +43,7 @@ export const Logo = ({
             width: 'auto',
             objectFit: 'contain',
             display: 'block',
-            // White background so the navy letters are visible on dark site backgrounds
-            backgroundColor: 'white',
-            borderRadius: '6px',
-            padding: '2px 4px',
+            filter: 'drop-shadow(0 0 8px rgba(0, 212, 255, 0.35)) drop-shadow(0 0 2px rgba(255, 255, 255, 0.3))',
           }}
           loading="eager"
           draggable={false}
@@ -79,6 +77,6 @@ export const Logo = ({
           )}
         </div>
       )}
-    </a>
+    </Link>
   );
 };

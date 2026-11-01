@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Logo } from './Logo';
 import { ShieldAlert, Home } from 'lucide-react';
 
-export const NotFoundPage = ({ onReturnHome }) => {
+export const NotFoundPage = () => {
   return (
     <div className="min-h-screen bg-brand-bg flex flex-col justify-between p-6 relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-electric/15 blur-[140px] rounded-full pointer-events-none" />
@@ -28,14 +29,13 @@ export const NotFoundPage = ({ onReturnHome }) => {
           The requested location does not exist or has been relocated within the facility network. Return to the main command center below.
         </p>
 
-        <button
-          type="button"
-          onClick={onReturnHome}
+        <Link
+          to="/"
           className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-brand-electric to-brand-cyan shadow-glow-sm hover:shadow-glow-md transition-all"
         >
           <Home className="w-4 h-4" />
           <span>Return to Homepage</span>
-        </button>
+        </Link>
       </main>
 
       <footer className="text-center text-xs text-brand-textMuted/60 pb-4">
