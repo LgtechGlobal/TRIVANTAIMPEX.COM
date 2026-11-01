@@ -18,7 +18,7 @@ export const PageHeader = ({
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Breadcrumb Navigation */}
-        <nav aria-label="Breadcrumb" className="mb-6 flex items-center space-x-2 text-xs text-brand-textMuted">
+        <nav aria-label="Breadcrumb" className="mb-5 sm:mb-6 flex flex-wrap items-center gap-1.5 sm:space-x-2 text-xs text-brand-textMuted">
           <Link to="/" className="hover:text-brand-cyan transition-colors flex items-center gap-1">
             <span>Home</span>
           </Link>

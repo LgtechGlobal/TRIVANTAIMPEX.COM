@@ -281,7 +281,7 @@ export const COMPANY_CONFIG = {
       title: "EVENT & SPECIAL-DUTY SECURITY",
       shortDesc: "Crowd guidance, access points, entry checks and coordinated security support according to the event plan.",
       fullDesc: "Dynamic crowd control and security coordination for corporate conferences, trade expos, sports tournaments, and organized private events. Ensures smooth ticketing queues, VIP corridor isolation, and emergency egress safety.",
-      image: "/images/WhatsApp Image 2026-10-24 at 6.54.37 PM.jpeg",
+      image: "/images/WhatsApp Image 2026-10-24 at 7.26.29 PM.jpeg",
       badge: "Dynamic Deployments",
       scope: [
         "Crowd guidance & queue marshaling",
@@ -340,7 +340,7 @@ export const COMPANY_CONFIG = {
       title: "RESIDENTIAL & PROPERTY SUPPORT",
       shortDesc: "Common-area maintenance coordination, lobby and entrance upkeep, service request tracking and site support.",
       fullDesc: "Dedicated property support services designed for resident welfare associations, residential societies, and township clubs. Coordinates lift lobbies, lighting maintenance, tenant service tickets, and entrance presentation.",
-      image: "/images/trivanta-security-team-lineup.jpg",
+      image: "/images/WhatsApp Image 2026-10-24 at 6.54.37 PM.jpeg",
       badge: "Property Care",
       scope: [
         "Common-area maintenance coordination",
@@ -397,7 +397,7 @@ export const COMPANY_CONFIG = {
       title: "VENDOR & CONSUMABLES COORDINATION",
       shortDesc: "Support with supply tracking, service follow-ups, consumables monitoring and vendor coordination as agreed.",
       fullDesc: "Streamlined operational procurement support for facility consumables and service vendors. Monitors stock levels for cleaning supplies, washroom toiletries, and safety gear while auditing service contract fulfillment.",
-      image: "/images/WhatsApp Image 2026-10-24 at 6.54.16 PM.jpeg",
+      image: "/images/WhatsApp Image 2026-10-24 at 7.27.38 PM.jpeg",
       badge: "Procurement & Vendor Ops",
       scope: [
         "Consumables stock tracking & minimum level alerts",
@@ -418,7 +418,7 @@ export const COMPANY_CONFIG = {
       title: "PAYROLL PROCESSING SUPPORT",
       shortDesc: "Monthly payroll inputs, attendance and leave data consolidation, salary calculations and payroll summaries.",
       fullDesc: "End-to-end payroll computation services tailored to contract workforces and enterprise employees. Aggregates biometric attendance, validates leave balances, computes gross/net salaries, and produces comprehensive payroll master files.",
-      image: "/images/WhatsApp Image 2026-10-24 at 6.55.40 PM.jpeg",
+      image: "/images/WhatsApp Image 2026-10-24 at 6.55.42 PM (1).jpeg",
       badge: "Payroll Administration",
       scope: [
         "Monthly payroll inputs & salary computations",
@@ -663,7 +663,7 @@ export const COMPANY_CONFIG = {
     {
       id: "warehouses-logistics",
       name: "Warehouses and Logistics",
-      image: "/images/traffic-gate-security.jpg",
+      image: "/images/WhatsApp Image 2026-10-24 at 6.54.37 PM.jpeg",
       description: "Fulfillment centers, container yards, and logistics parks needing truck and consignment verification.",
       features: ["Truck In/Out Verifications", "Loading Dock Watch", "Seal Verification"]
     },
@@ -684,7 +684,7 @@ export const COMPANY_CONFIG = {
     {
       id: "events-venues",
       name: "Events and Venues",
-      image: "/images/WhatsApp Image 2026-10-24 at 6.54.17 PM (1).jpeg",
+      image: "/images/WhatsApp Image 2026-10-24 at 7.26.29 PM.jpeg",
       description: "Conventions, corporate seminars, trade expos, and organized private gatherings with VIP cordons.",
       features: ["Ingress/Egress Control", "Crowd Stewards", "VIP Cordons"]
     }

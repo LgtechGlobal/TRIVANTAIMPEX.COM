@@ -3,13 +3,8 @@ import { Link } from 'react-router-dom';
 import { Hero } from '../components/Hero';
 import { TrustHighlights } from '../components/TrustHighlights';
 import { AboutSection } from '../components/AboutSection';
-import { ServicesSection } from '../components/ServicesSection';
-import { WhyChooseUs } from '../components/WhyChooseUs';
-import { IndustriesSection } from '../components/IndustriesSection';
 import { SecurityFirstSection } from '../components/SecurityFirstSection';
 import { WorkingProcess } from '../components/WorkingProcess';
-import { PhotoGallery } from '../components/PhotoGallery';
-import { CareersSection } from '../components/CareersSection';
 import { RequestQuoteSection } from '../components/RequestQuoteSection';
 import { COMPANY_CONFIG } from '../config/company';
 import { Zap, UserCheck, LayoutDashboard, FileCheck, ArrowRight, MapPin, ShieldCheck, CheckCircle2 } from 'lucide-react';
@@ -25,9 +20,6 @@ export const HomePage = ({ onRequestQuote, onSelectService, selectedService }) =
 
       {/* About Section snippet */}
       <AboutSection onRequestQuote={onRequestQuote} />
-
-      {/* Services Section with Modals */}
-      <ServicesSection onSelectService={onSelectService} />
 
       {/* PDF Page 8: More Than a Service — A Promise */}
       <section className="relative py-20 bg-gradient-to-b from-[#061426] via-[#040D1A] to-[#061426] border-y border-brand-border/40 overflow-hidden">
@@ -86,12 +78,6 @@ export const HomePage = ({ onRequestQuote, onSelectService, selectedService }) =
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <WhyChooseUs />
-
-      {/* Industries We Serve */}
-      <IndustriesSection />
-
       {/* PDF Page 10: Our Presence (Odisha, Chhattisgarh and Pan India) */}
       <section className="relative py-20 bg-gradient-to-b from-[#040D1A] via-[#061426] to-[#040D1A] border-b border-brand-border/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -143,12 +129,6 @@ export const HomePage = ({ onRequestQuote, onSelectService, selectedService }) =
 
       {/* 4-Step Working Process */}
       <WorkingProcess />
-
-      {/* Real Field Photo Gallery */}
-      <PhotoGallery />
-
-      {/* Careers & Recruitment */}
-      <CareersSection />
 
       {/* High-Conversion Request a Quote & Contact Desk */}
       <RequestQuoteSection preselectedService={selectedService} />

@@ -7,24 +7,10 @@ import {
   ArrowRight,
   Target,
   Compass,
-  Award,
-  Clock,
-  TrendingUp,
-  UserCheck,
-  ShieldCheck,
-  CheckCircle2
+  Award
 } from 'lucide-react';
 
 export const AboutSection = ({ onRequestQuote }) => {
-  const valueIcons = {
-    ShieldCheck: <ShieldCheck className="w-5 h-5 text-brand-cyan" />,
-    UserCheck: <UserCheck className="w-5 h-5 text-brand-cyan" />,
-    Award: <Award className="w-5 h-5 text-brand-cyan" />,
-    Clock: <Clock className="w-5 h-5 text-brand-cyan" />,
-    TrendingUp: <TrendingUp className="w-5 h-5 text-brand-cyan" />,
-    CheckCircle2: <CheckCircle2 className="w-5 h-5 text-brand-cyan" />
-  };
-
   return (
     <section id="about" className="py-24 relative overflow-hidden scroll-mt-20">
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-brand-electric/10 blur-[130px] rounded-full pointer-events-none" />
@@ -44,7 +30,7 @@ export const AboutSection = ({ onRequestQuote }) => {
                 <img
                   src="/images/trivanta-security-team-lineup.jpg"
                   alt="Trivanta Impex uniformed security personnel in disciplined formation"
-                  className="w-full h-[460px] sm:h-[540px] object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-[340px] sm:h-[540px] object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
                 
@@ -181,42 +167,6 @@ export const AboutSection = ({ onRequestQuote }) => {
 
           </div>
 
-        </div>
-
-        {/* ── OUR CORE VALUES (PDF Page 2 Grid) ── */}
-        <div className="pt-12 border-t border-brand-border/40">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-card border border-brand-border/60 text-[11px] font-bold tracking-[0.2em] text-brand-cyan uppercase mb-3">
-              <span>PRINCIPLES THAT DEFINE US</span>
-            </div>
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-              Our Core Values
-            </h3>
-            <p className="text-xs sm:text-sm text-brand-textMuted mt-2">
-              Every deployment and customer relationship is anchored in these six foundational tenets.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {COMPANY_CONFIG.coreValues.map((val) => (
-              <div
-                key={val.title}
-                className="p-5 rounded-2xl bg-brand-card/40 border border-brand-border/50 hover:border-brand-cyan/60 hover:bg-brand-card/70 transition-all duration-300 group"
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="p-2.5 rounded-xl bg-brand-bgSecondary border border-brand-border/60 group-hover:border-brand-cyan/60 transition-colors">
-                    {valueIcons[val.icon] || <ShieldCheck className="w-5 h-5 text-brand-cyan" />}
-                  </div>
-                  <h4 className="text-base font-bold text-white group-hover:text-brand-cyan transition-colors">
-                    {val.title}
-                  </h4>
-                </div>
-                <p className="text-xs sm:text-sm text-brand-textMuted leading-relaxed">
-                  {val.description}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
 
       </div>

@@ -143,7 +143,7 @@ export const Navbar = ({ onRequestQuote }) => {
 
         {/* Drawer Panel */}
         <div
-          className={`fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-brand-bgSecondary border-l border-brand-border shadow-2xl p-6 flex flex-col justify-between transition-transform duration-300 z-50 ${
+          className={`fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-brand-bgSecondary border-l border-brand-border shadow-2xl p-6 flex flex-col justify-between transition-transform duration-300 z-50 overflow-y-auto ${
             mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >

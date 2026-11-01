@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { ArrowRight, Users, Shield, Cpu } from 'lucide-react';
 
 export const SecurityFirstSection = ({ onRequestQuote }) => {
@@ -46,7 +46,7 @@ export const SecurityFirstSection = ({ onRequestQuote }) => {
               <img
                 src="/images/security-checkpoint-screening.jpg"
                 alt="Security officers conducting screening and checkpoint verification at entrance"
-                className="w-full h-[480px] sm:h-[540px] object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-[320px] sm:h-[480px] lg:h-[540px] object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"
               />
 

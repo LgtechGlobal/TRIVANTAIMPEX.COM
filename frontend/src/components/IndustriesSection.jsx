@@ -2,7 +2,7 @@ import React from 'react';
 import { COMPANY_CONFIG } from '../config/company';
 import { Building, Shield } from 'lucide-react';
 
-export const IndustriesSection = () => {
+export const IndustriesSection = ({ onRequestQuote }) => {
   return (
     <section id="industries" className="py-24 relative overflow-hidden scroll-mt-20">
       <div className="absolute top-1/2 right-0 w-96 h-96 bg-brand-cyan/10 blur-[150px] rounded-full pointer-events-none" />
@@ -25,43 +25,50 @@ export const IndustriesSection = () => {
           </p>
         </div>
 
-        {/* 8 Industries Card Grid */}
+        {/* 8 Industries Card Grid - High Clarity Visible Images */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {COMPANY_CONFIG.industries.map((ind) => (
             <div
               key={ind.id}
-              className="group relative h-80 rounded-2xl overflow-hidden border border-brand-border/60 hover:border-brand-cyan/80 transition-all duration-500 shadow-card hover:shadow-[0_15px_35px_rgba(0,212,255,0.25)] flex flex-col justify-end p-6 cursor-pointer"
+              onClick={onRequestQuote}
+              className="group rounded-2xl overflow-hidden bg-brand-card/70 border border-brand-border/60 hover:border-brand-cyan/70 transition-all duration-300 shadow-card hover:shadow-[0_15px_35px_rgba(0,212,255,0.22)] flex flex-col justify-between hover:-translate-y-1.5 cursor-pointer"
             >
-              <img
-                src={ind.image}
-                alt={ind.name}
-                className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
-                loading="lazy"
-              />
+              {/* Photo Showcase - 100% Clear & Visible */}
+              <div className="relative h-56 sm:h-60 w-full overflow-hidden bg-brand-bgSecondary">
+                <img
+                  src={ind.image}
+                  alt={ind.name}
+                  className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                
+                {/* Subtle bottom edge gradient only - leaving the photo completely clear */}
+                <div className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-brand-card/90 to-transparent pointer-events-none" />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/75 to-brand-bg/30 group-hover:from-brand-bg group-hover:via-brand-bg/85 transition-all duration-300" />
-              <div className="absolute inset-0 bg-brand-bgSecondary/20 group-hover:bg-brand-bgSecondary/40 transition-colors" />
-
-              <div className="relative z-10 transition-transform duration-300 group-hover:-translate-y-2">
-                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-brand-bg/80 border border-brand-border/50 text-[11px] font-semibold text-brand-cyan mb-2.5">
-                  <Shield className="w-3 h-3" />
-                  <span>Sector</span>
+                <div className="absolute top-3 left-3 z-10">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#061426]/90 backdrop-blur-md border border-brand-cyan/40 text-[11px] font-semibold text-brand-cyan shadow-sm">
+                    <Shield className="w-3 h-3" />
+                    <span>Sector</span>
+                  </span>
                 </div>
+              </div>
 
-                <h3 className="text-xl font-bold text-white group-hover:text-brand-cyan transition-colors mb-2">
-                  {ind.name}
-                </h3>
+              {/* Card Body */}
+              <div className="p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 className="text-lg font-bold text-white group-hover:text-brand-cyan transition-colors mb-2">
+                    {ind.name}
+                  </h3>
 
-                <p className="text-xs text-brand-textMuted line-clamp-2 leading-relaxed mb-3 group-hover:text-white/90 transition-colors">
-                  {ind.description}
-                </p>
+                  <p className="text-xs text-brand-textMuted leading-relaxed mb-4">
+                    {ind.description}
+                  </p>
 
-                <div className="max-h-0 opacity-0 group-hover:max-h-24 group-hover:opacity-100 transition-all duration-300 overflow-hidden">
-                  <div className="flex flex-wrap gap-1.5 pt-1">
+                  <div className="flex flex-wrap gap-1.5 mb-2">
                     {ind.features.map((feat) => (
                       <span
                         key={feat}
-                        className="text-[10px] font-medium text-brand-cyan bg-brand-bg/90 border border-brand-cyan/30 px-2 py-0.5 rounded"
+                        className="text-[10px] font-medium text-brand-cyan bg-brand-cyan/10 border border-brand-cyan/25 px-2 py-0.5 rounded"
                       >
                         {feat}
                       </span>
@@ -69,7 +76,12 @@ export const IndustriesSection = () => {
                   </div>
                 </div>
 
-                <div className="mt-4 h-[2px] w-12 group-hover:w-full bg-gradient-to-r from-brand-electric to-brand-cyan rounded-full transition-all duration-500" />
+                <div className="mt-4 pt-3 border-t border-brand-border/40 flex items-center justify-between text-xs">
+                  <span className="text-brand-textMuted text-[11px]">Deployments Available</span>
+                  <span className="text-brand-cyan font-semibold group-hover:translate-x-1 transition-transform">
+                    Inquire →
+                  </span>
+                </div>
               </div>
 
             </div>

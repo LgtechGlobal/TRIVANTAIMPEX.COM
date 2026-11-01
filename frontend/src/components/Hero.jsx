@@ -265,25 +265,6 @@ export const Hero = ({ onRequestQuote }) => {
         <span className="text-[10px] font-semibold tracking-[0.2em] uppercase">Scroll</span>
         <ChevronDown className="w-5 h-5 animate-bounce" />
       </a>
-
-      {/* ── Mobile sticky CTA bar — only visible on xs/sm, sticks above bottom ── */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 sm:hidden flex items-center gap-2 px-4 py-3 bg-[#020a14]/90 backdrop-blur-md border-t border-white/10">
-        <a
-          href="#services"
-          className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-bold text-white border border-white/10"
-          style={{ background: 'linear-gradient(135deg,#0788FF,#0092FF)' }}
-        >
-          Our Services
-        </a>
-        <button
-          type="button"
-          onClick={onRequestQuote}
-          className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-semibold text-brand-cyan bg-white/5 border border-brand-cyan/40"
-        >
-          <Shield className="w-4 h-4" />
-          Get a Quote
-        </button>
-      </div>
     </section>
   );
 };

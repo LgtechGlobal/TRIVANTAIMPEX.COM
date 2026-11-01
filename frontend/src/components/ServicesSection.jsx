@@ -96,29 +96,27 @@ export const ServicesSection = ({ onSelectService }) => {
               key={service.id}
               className="group relative rounded-2xl bg-brand-card/70 border border-brand-border/60 hover:border-brand-cyan/70 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(7,136,255,0.22)] flex flex-col justify-between overflow-hidden"
             >
-              {/* Card Image Banner */}
-              <div className="relative h-56 w-full overflow-hidden">
+              {/* Card Image Banner - Optimized for maximum clarity */}
+              <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-brand-bgSecondary">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-108"
+                  className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
                 
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-card via-brand-card/40 to-transparent" />
+                {/* Subtle bottom edge gradient only - leaving image completely clear */}
+                <div className="absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-brand-card/90 to-transparent pointer-events-none" />
 
-                <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-10">
-                  <span className="text-xs font-extrabold tracking-widest text-brand-cyan/90 bg-brand-bg/80 backdrop-blur-md px-2.5 py-1 rounded-md border border-brand-border/50">
+                <div className="absolute top-3.5 left-3.5 z-10">
+                  <span className="text-xs font-extrabold tracking-widest text-brand-cyan bg-[#061426]/90 backdrop-blur-md px-2.5 py-1 rounded-md border border-brand-cyan/40 shadow-md">
                     {service.number}
-                  </span>
-                  <span className="text-[11px] font-semibold text-white/90 bg-brand-bgSecondary/85 backdrop-blur-md px-3 py-1 rounded-full border border-brand-border/50">
-                    {service.badge}
                   </span>
                 </div>
 
-                <div className="absolute bottom-3 left-4 z-10">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-brand-cyan bg-brand-card/90 px-2 py-0.5 rounded border border-brand-cyan/40">
-                    {service.categoryLabel}
+                <div className="absolute top-3.5 right-3.5 z-10">
+                  <span className="text-[11px] font-semibold text-white/95 bg-[#061426]/90 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 shadow-md">
+                    {service.badge}
                   </span>
                 </div>
               </div>
@@ -126,6 +124,12 @@ export const ServicesSection = ({ onSelectService }) => {
               {/* Card Content */}
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
+                  <div className="mb-2.5">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-brand-cyan bg-brand-cyan/10 px-2.5 py-1 rounded-md border border-brand-cyan/30 inline-block">
+                      {service.categoryLabel}
+                    </span>
+                  </div>
+
                   <h3 className="text-lg font-bold text-white group-hover:text-brand-cyan transition-colors mb-2.5 leading-snug">
                     {service.title}
                   </h3>
@@ -270,34 +274,34 @@ export const ServicesSection = ({ onSelectService }) => {
             className="relative w-full max-w-2xl bg-brand-bgSecondary border border-brand-border rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Modal Banner Header */}
-            <div className="relative h-44 sm:h-52 w-full flex-shrink-0">
+            {/* Modal Banner Header - Clear high-resolution view */}
+            <div className="relative h-48 sm:h-72 w-full flex-shrink-0 bg-brand-bg">
               <img
                 src={activeModalService.image}
                 alt={activeModalService.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-bgSecondary via-brand-bgSecondary/60 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-brand-bgSecondary via-brand-bgSecondary/70 to-transparent pointer-events-none" />
 
               <button
                 type="button"
                 onClick={closeServiceModal}
-                className="absolute top-4 right-4 p-2 rounded-full bg-brand-bg/80 text-brand-textMuted hover:text-white border border-brand-border hover:border-brand-cyan transition-colors"
+                className="absolute top-4 right-4 p-2 rounded-full bg-brand-bg/85 text-brand-textMuted hover:text-white border border-brand-border hover:border-brand-cyan transition-colors z-20 shadow-md"
                 aria-label="Close modal"
               >
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="absolute bottom-4 left-6 right-6">
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="text-[10px] font-bold tracking-widest text-brand-cyan bg-brand-card/90 px-2.5 py-0.5 rounded border border-brand-border">
+              <div className="absolute bottom-4 left-6 right-6 z-10">
+                <div className="flex items-center gap-2 mb-1.5">
+                  <span className="text-[10px] font-bold tracking-widest text-brand-cyan bg-[#061426]/90 px-2.5 py-0.5 rounded border border-brand-cyan/40">
                     SERVICE {activeModalService.number}
                   </span>
-                  <span className="text-[10px] font-semibold text-white/90 bg-brand-electric/30 px-2 py-0.5 rounded border border-brand-electric/50">
+                  <span className="text-[10px] font-semibold text-white/95 bg-brand-electric/40 px-2.5 py-0.5 rounded border border-brand-electric/50">
                     {activeModalService.categoryLabel}
                   </span>
                 </div>
-                <h3 className="text-xl sm:text-2xl font-extrabold text-white leading-tight">
+                <h3 className="text-xl sm:text-2xl font-extrabold text-white leading-tight drop-shadow-md">
                   {activeModalService.title}
                 </h3>
               </div>
